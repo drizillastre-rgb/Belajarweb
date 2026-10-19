@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi Phishing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 4px 15px #0002;
+    }
+
+    input, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+    }
+
+    button {
+      background: #1769ff;
+      color: white;
+      border: 0;
+      border-radius: 6px;
+    }
+
+    #hasil {
+      color: #b42318;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Simulasi Login</h2>
+    <p>Contoh halaman untuk belajar keamanan siber.</p>
+
+    <form id="demo">
+      <input type="text" placeholder="Nama pengguna" required>
+      <input type="password" placeholder="Password contoh" required>
+      <button type="submit">Uji Simulasi</button>
+    </form>
+
+    <p id="hasil"></p>
+  </div>
+
+  <script>
+    document.getElementById("demo").addEventListener(
+      "submit", function(event) {
+        event.preventDefault();
+        this.reset();
+        document.getElementById("hasil").textContent =
+          "Simulasi selesai. Jangan masukkan password asli!";
+      }
+    );
+  </script>
+</body>
+</html>
